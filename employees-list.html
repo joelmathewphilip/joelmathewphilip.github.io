@@ -6,8 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Employees List</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
             crossorigin="anonymous" />
 
@@ -37,14 +36,11 @@
         <!--Navbar Component-->
         <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
             <div class="container-fluid">
-                <a href="/dashboard.html" class="navbar-brand"><span
-                        class="brand-gradient">EMS2.0</span></a>
+                <a href="/dashboard.html" class="navbar-brand"><span class="brand-gradient">EMS2.0</span></a>
                 <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbar-supported-content"
-                    aria-controls="navbar-supported-content" aria-expanded="false"
-                    aria-label="Toggle Navigation"><svg xmlns="http://www.w3.org/2000/svg"
-                        width="16" height="16" fill="currentColor" class="bi bi-list"
-                        viewBox="0 0 16 16">
+                    data-bs-target="#navbar-supported-content" aria-controls="navbar-supported-content"
+                    aria-expanded="false" aria-label="Toggle Navigation"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                     </svg></button>
@@ -58,53 +54,41 @@
                         <li class="nav-item"><a class="nav-link" href="employees-list.html"
                                 aria-current="page">Employees</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="jobs-list.html"
-                                aria-current="page">Jobs</a>
+                        <li class="nav-item"><a class="nav-link" href="jobs-list.html" aria-current="page">Jobs</a>
                         </li>
                     </ul>
                     <form action="" role="search" class="d-flex">
-                        <div class="hstack gap-3 me-3"><input
-                                type="form-control form-control-sm me-auto" type="search"
+                        <div class="hstack gap-3 me-3"><input type="form-control form-control-sm me-auto" type="search"
                                 placeholder="Search For.." aria-label="Search For.." />
-                            <button class="btn btn-sm btn-success"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <button class="btn btn-sm btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                     <path
                                         d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                                 </svg></button>
 
                         </div>
                         <div class="vr"></div>
-                        <a href="login.html" class="btn btn-sm btn-warning ms-3"><svg
-                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
+                        <a href="login.html" class="btn btn-sm btn-warning ms-3"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
                                 <path d="M7.5 1v7h1V1h-1z" />
                                 <path
                                     d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
                             </svg></a>
-
                     </form>
                 </div>
-
             </div>
-
         </nav>
 
-        <div class="modal fade" id="add_employee" tabindex="-1" role="dialog"
+        <div class="modal fade" id="add_employee" tabindex="-1" data-bs-backdrop="static"
             aria-labelledby="add employee modal" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-dialog-centered modal-md">
                 <div class="modal-content">
                     <div class="modal-header bg-dark">
                         <h5 class="modal-title text-white rounded-top" id="addEmployeeTitle">Add
                             Employee Details</h5>
 
-                        <a href="/employees-list.html" data-dismiss="modal"
-                            class="btn btn-dark close"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-x-lg"
-                                viewBox="0 0 16 16">
-                                <path
-                                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-                            </svg></a>
+                        <button type="button" data-dismiss="modal" class="btn btn-close btn-close-white"
+                            data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="" class="mt-2 mx-3">
@@ -114,35 +98,20 @@
 
                             <div class="row mt-3">
 
-                                <input class="form-control col me-3" type="text"
-                                    placeholder="First Name" />
-                                <input class="form-control col" type="text"
-                                    placeholder="Last Name" />
+                                <input class="form-control col me-3" type="text" placeholder="First Name" />
+                                <input class="form-control col" type="text" placeholder="Last Name" />
 
                             </div>
 
                             <div class="row mt-3">
-                                <input class="form-control col me-3" type="email"
-                                    placeholder="Email Id" />
-                                <input class="form-control col" type="phone" placeholder="Phone" />
+                                <input class="form-control col me-3" type="email" placeholder="Email Id" />
+                                <input class="form-control col" type="number" placeholder="Phone" />
 
 
                             </div>
-                            <!-- <div class="dropdown mt-3 ">
-                                <button class="btn btn-secondary dropdown-toggle" type="button"
-                                    id="dropdownMenuButton" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    Dropdown button
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </div> -->
+
                             <div class="row mt-3">
-                                <select id="cars" name="carlist" form="carform"
-                                    class="form-control">
+                                <select id="cars" name="carlist" form="carform" class="form-control">
                                     <option value="default">Select Your Option</option>
                                     <option value="volvo">Volvo</option>
                                     <option value="saab">Saab</option>
@@ -153,7 +122,7 @@
 
                             <div class="row mt-3">
                                 <a href="#" class="btn btn-warning col me-3">Update Employee</a>
-                                <a href="#" class="btn btn-success col-2">Close</a>
+                                <a href="#" class="btn btn-success col-2 close">Close</a>
                             </div>
                         </form>
 
@@ -167,16 +136,16 @@
             </div>
         </div>
 
+
         <div class="container-fluid">
             <div class="row ms-4 mt-3">
                 <div class="col-md-2">
                     <div class="list-group shadow-sm small mb-3">
                         <div class="list-group-item active">Employees Data</div>
-                        <a href="#" class="list-group-item list-group-item-action"
-                            data-bs-toggle="modal" data-bs-target="#add_employee">Add Employee</a>
+                        <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal"
+                            data-bs-target="#add_employee">Add Employee</a>
 
-                        <a href="employees-list.html"
-                            class="list-group-item list-group-item-action">View Employee</a>
+                        <a href="employees-list.html" class="list-group-item list-group-item-action">View Employee</a>
                     </div>
                     <div class="list-group shadow-sm small mb-3">
                         <div class="list-group-item active">Related Links</div>
@@ -211,23 +180,22 @@
                                 <td>johndoe@gmail.com</td>
                                 <td>
                                     <div class="d-grid">
-                                        <a href="" data-bs-toggle="modal"
-                                            data-bs-target="#employee_detail"
+                                        <a href="" data-bs-toggle="modal" data-bs-target="#employee_detail"
                                             class="btn btn-primary">Details
                                         </a>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-grid">
-                                        <a data-bs-toggle="modal" data-bs-target="#employee_edit"
-                                            href="" class="btn btn-warning">Edit
+                                        <a data-bs-toggle="modal" data-bs-target="#employee_edit" href=""
+                                            class="btn btn-warning">Edit
                                         </a>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-grid">
-                                        <a data-bs-toggle="modal" data-bs-target="#employee_delete"
-                                            href="" class="btn btn-danger">Delete
+                                        <a data-bs-toggle="modal" data-bs-target="#employee_delete" href=""
+                                            class="btn btn-danger">Delete
                                         </a>
                                     </div>
                                 </td>
@@ -239,23 +207,22 @@
                                 <td>johndoe@gmail.com</td>
                                 <td>
                                     <div class="d-grid">
-                                        <a href="" data-bs-toggle="modal"
-                                            data-bs-target="#employee_detail"
+                                        <a href="" data-bs-toggle="modal" data-bs-target="#employee_detail"
                                             class="btn btn-primary">Details
                                         </a>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-grid">
-                                        <a data-bs-toggle="modal" data-bs-target="#employee_edit"
-                                            href="" class="btn btn-warning">Edit
+                                        <a data-bs-toggle="modal" data-bs-target="#employee_edit" href=""
+                                            class="btn btn-warning">Edit
                                         </a>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-grid">
-                                        <a data-bs-toggle="modal" data-bs-target="#employee_delete"
-                                            href="" class="btn btn-danger">Delete
+                                        <a data-bs-toggle="modal" data-bs-target="#employee_delete" href=""
+                                            class="btn btn-danger">Delete
                                         </a>
                                     </div>
                                 </td>
@@ -267,23 +234,22 @@
                                 <td>johndoe@gmail.com</td>
                                 <td>
                                     <div class="d-grid">
-                                        <a href="" data-bs-toggle="modal"
-                                            data-bs-target="#employee_detail"
+                                        <a href="" data-bs-toggle="modal" data-bs-target="#employee_detail"
                                             class="btn btn-primary">Details
                                         </a>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-grid">
-                                        <a data-bs-toggle="modal" data-bs-target="#employee_edit"
-                                            href="" class="btn btn-warning">Edit
+                                        <a data-bs-toggle="modal" data-bs-target="#employee_edit" href=""
+                                            class="btn btn-warning">Edit
                                         </a>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-grid">
-                                        <a data-bs-toggle="modal" data-bs-target="#employee_delete"
-                                            href="" class="btn btn-danger">Delete
+                                        <a data-bs-toggle="modal" data-bs-target="#employee_delete" href=""
+                                            class="btn btn-danger">Delete
                                         </a>
                                     </div>
                                 </td>
@@ -295,23 +261,22 @@
                                 <td>johndoe@gmail.com</td>
                                 <td>
                                     <div class="d-grid">
-                                        <a href="" data-bs-toggle="modal"
-                                            data-bs-target="#employee_detail"
+                                        <a href="" data-bs-toggle="modal" data-bs-target="#employee_detail"
                                             class="btn btn-primary">Details
                                         </a>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-grid">
-                                        <a data-bs-toggle="modal" data-bs-target="#employee_edit"
-                                            href="" class="btn btn-warning">Edit
+                                        <a data-bs-toggle="modal" data-bs-target="#employee_edit" href=""
+                                            class="btn btn-warning">Edit
                                         </a>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-grid">
-                                        <a data-bs-toggle="modal" data-bs-target="#employee_delete"
-                                            href="" class="btn btn-danger">Delete
+                                        <a data-bs-toggle="modal" data-bs-target="#employee_delete" href=""
+                                            class="btn btn-danger">Delete
                                         </a>
                                     </div>
                                 </td>
@@ -323,23 +288,22 @@
                                 <td>johndoe@gmail.com</td>
                                 <td>
                                     <div class="d-grid">
-                                        <a href="" data-bs-toggle="modal"
-                                            data-bs-target="#employee_detail"
+                                        <a href="" data-bs-toggle="modal" data-bs-target="#employee_detail"
                                             class="btn btn-primary">Details
                                         </a>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-grid">
-                                        <a data-bs-toggle="modal" data-bs-target="#employee_edit"
-                                            href="" class="btn btn-warning">Edit
+                                        <a data-bs-toggle="modal" data-bs-target="#employee_edit" href=""
+                                            class="btn btn-warning">Edit
                                         </a>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-grid">
-                                        <a data-bs-toggle="modal" data-bs-target="#employee_delete"
-                                            href="" class="btn btn-danger">Delete
+                                        <a data-bs-toggle="modal" data-bs-target="#employee_delete" href=""
+                                            class="btn btn-danger">Delete
                                         </a>
                                     </div>
                                 </td>
